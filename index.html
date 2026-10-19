@@ -3,101 +3,231 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Argiris Vivelis — Cybersecurity & Software Development</title>
-<meta name="description" content="Portfolio of Argiris Vivelis: Python/FastAPI, React, C++/Java and cybersecurity projects. Open to 100% remote roles.">
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'; upgrade-insecure-requests">
+<title>Argiris Vivelis — Software Developer & Cybersecurity</title>
+<meta name="description" content="Portfolio of Argiris Vivelis: Python/FastAPI, React, C++/Java and cybersecurity projects. Available now for 100% remote roles.">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; img-src 'self' data:; font-src https://fonts.gstatic.com; base-uri 'none'; form-action 'none'; object-src 'none'; upgrade-insecure-requests">
 <meta name="referrer" content="strict-origin-when-cross-origin">
-<meta name="theme-color" content="#0b6bcb">
+<meta name="theme-color" content="#050e1c">
 <link rel="canonical" href="https://argirisviv.github.io/">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://argirisviv.github.io/">
-<meta property="og:title" content="Argiris Vivelis — Cybersecurity & Software Development">
-<meta property="og:description" content="Portfolio of Argiris Vivelis: Python/FastAPI, React, C++/Java and cybersecurity projects. Open to 100% remote roles.">
+<meta property="og:title" content="Argiris Vivelis — Software Developer & Cybersecurity">
+<meta property="og:description" content="Portfolio of Argiris Vivelis: Python/FastAPI, React, C++/Java and cybersecurity projects. Available now for 100% remote roles.">
 <meta property="og:image" content="https://argirisviv.github.io/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Argiris Vivelis, software developer and cybersecurity">
 <meta name="twitter:card" content="summary_large_image">
+<script src="theme.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..800&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div id="bar"></div>
-<nav><div class="wrap"><a class="brand" href="#top"><div class="ph" role="img" aria-label="Argiris Vivelis"></div>Argiris Vivelis</a>
-<ul><li><a href="#projects">Projects</a></li><li><a href="#terminal">Terminal</a></li><li><a href="#experience">Experience</a></li><li><a href="#skills">Skills</a></li><li><a href="#contact">Contact</a></li><li><button id="th" aria-label="Toggle theme">◐</button></li></ul></div></nav>
+<a class="skip" href="#main">Skip to content</a>
+<canvas id="net" aria-hidden="true"></canvas>
+<div id="progress" aria-hidden="true"></div>
 
-<header class="hero" id="top"><div class="wrap">
-<div>
-<span class="tag"><i></i>Available now for 100% remote roles</span>
-<h1>Hi, I'm <span>Argiris Vivelis</span></h1>
-<p class="typed" id="type"></p>
-<p class="lead">I build full-stack applications and security tools in Python, FastAPI, React and C++/Java, with a focus on application security and security automation.</p>
-<a class="btn p" href="#projects">View my work</a><a class="btn" href="#terminal">Try the terminal</a><a class="btn" href="Argiris_Vivelis_CV.pdf" target="_blank" rel="noopener noreferrer">View CV</a><a class="btn" href="Argiris_Vivelis_CV.pdf" download="Argiris_Vivelis_CV.pdf">Download CV</a><a class="btn" href="https://linkedin.com/in/argiris-vivelis-a49b79262" rel="noopener noreferrer">LinkedIn</a><a class="btn" href="https://github.com/ArgirisViv" rel="noopener noreferrer">GitHub</a>
-</div>
-<div class="pic"><div class="frame"><div class="ph" role="img" aria-label="Photo of Argiris Vivelis"></div></div>
-<span class="fl">Python</span><span class="fl">C++17</span><span class="fl">FastAPI</span><span class="fl">React</span></div>
-</div>
-<div class="wrap"><div class="stats full">
-<div class="stat"><b data-n="3">0</b><span>Major projects</span></div>
-<div class="stat"><b data-n="359" data-s="h">0</b><span>Certified security training</span></div>
-<div class="stat"><b data-n="3">0</b><span>Security certifications</span></div>
-<div class="stat"><b>UTC+2</b><span>Greece, available now</span></div></div></div>
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="#top"><span class="avatar ph" role="img" aria-label="Argiris Vivelis"></span><span>Argiris Vivelis</span></a>
+    <nav aria-label="Sections"><a href="#work">Work</a><a href="#terminal">Terminal</a><a href="#path">Experience</a><a href="#stack">Skills</a><a href="#contact">Contact</a></nav>
+    <div class="nav-act">
+      <button id="theme" class="icon" type="button" aria-label="Switch colour theme"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 3.5a8.5 8.5 0 0 1 0 17z" fill="currentColor"/></svg></button>
+      <a class="btn sm primary" href="Argiris_Vivelis_CV.pdf" target="_blank" rel="noopener noreferrer">CV</a>
+    </div>
+  </div>
 </header>
 
-<section id="projects"><div class="wrap">
-<h2 class="rv">Projects</h2><p class="sub rv">Real, tested software, all public on GitHub. Open a card for the technical details.</p>
-<div class="filters rv"><button class="f on" data-t="all">All</button><button class="f" data-t="sec">Security</button><button class="f" data-t="web">Full-stack</button><button class="f" data-t="ai">AI / ML</button></div>
-<div class="grid">
-<article class="card pc rv" data-t="sec"><span class="status">Ongoing · Jul 2026</span><h3>Sentinel AV</h3>
-<p>Windows endpoint-security prototype with a native C++17 scanning engine and a JavaFX console.</p>
-<ul class="chips"><li>C++17</li><li>Java</li><li>JavaFX</li><li>GitHub Actions</li><li>Docker</li></ul>
-<details><summary>Technical details</summary><ul><li>SHA-256 signature matching (Windows CNG), EICAR detection and an explainable risk score (entropy, PE headers).</li><li>Process and folder monitoring, ransomware-style alerts, opt-in quarantine with hash-verified restore.</li><li>Automated C++/Java tests, Windows CI, release workflow and a documented threat model.</li></ul></details>
-<p class="gh"><a href="https://github.com/ArgirisViv/sentinel-antivirus" rel="noopener noreferrer">View on GitHub →</a></p></article>
+<main id="main">
+<section class="hero" id="top">
+  <div class="wrap hero-in">
+    <div class="hero-text">
+      <p class="status"><span class="dot"></span>Available now for 100% remote roles</p>
+      <h1 class="name" aria-label="Argiris Vivelis"><span class="l" data-text="Argiris" aria-hidden="true">Argiris</span><span class="l" data-text="Vivelis" aria-hidden="true">Vivelis</span></h1>
+      <p class="role">Software developer building secure, tested systems.</p>
+      <p class="lead">I build full-stack applications and security tools in Python, FastAPI, React, C++ and Java, with a focus on application security and security automation.</p>
+      <div class="actions">
+        <a class="btn primary" href="#work">See my work</a>
+        <a class="btn" href="Argiris_Vivelis_CV.pdf" download="Argiris_Vivelis_CV.pdf">Download CV</a>
+        <a class="btn" href="https://github.com/ArgirisViv" rel="noopener noreferrer">GitHub</a>
+        <a class="btn" href="https://linkedin.com/in/argiris-vivelis-a49b79262" rel="noopener noreferrer">LinkedIn</a>
+      </div>
+    </div>
+    <div class="badge-wrap">
+      <div class="badge" id="badge" role="button" tabindex="0" aria-pressed="false" aria-label="Access badge. Press to flip and see quick facts">
+        <div class="inner">
+          <div class="face front">
+            <div class="badge-top"><span>Access badge</span><span class="chip-ic" aria-hidden="true"></span></div>
+            <div class="badge-photo ph" role="img" aria-label="Photo of Argiris Vivelis"></div>
+            <div class="badge-body">
+              <strong>Argiris Vivelis</strong>
+              <span>Software Developer, Cybersecurity</span>
+              <dl><div><dt>Base</dt><dd>Mytilene</dd></div><div><dt>Zone</dt><dd>UTC+2</dd></div><div><dt>Mode</dt><dd>Remote</dd></div></dl>
+            </div>
+            <div class="badge-code" aria-hidden="true"></div>
+            <div class="glare" aria-hidden="true"></div>
+          </div>
+          <div class="face back" aria-hidden="true">
+            <div class="badge-top"><span>Quick facts</span><span class="chip-ic" aria-hidden="true"></span></div>
+            <dl class="facts">
+              <div><dt>Availability</dt><dd>Now</dd></div>
+              <div><dt>Work mode</dt><dd>100% remote</dd></div>
+              <div><dt>Open to</dt><dd>Full-time, part-time, contract</dd></div>
+              <div><dt>Languages</dt><dd>Greek, English (B2)</dd></div>
+              <div><dt>Favourite language</dt><dd>C++</dd></div>
+            </dl>
+            <div class="qr-box"><svg class="qr" viewBox="0 0 37 37" role="img" aria-label="QR code to LinkedIn profile" shape-rendering="crispEdges"><rect width="100%" height="100%" fill="#fff"/><path fill="#0b1d36" d="M2 2h1v1h-1zM3 2h1v1h-1zM4 2h1v1h-1zM5 2h1v1h-1zM6 2h1v1h-1zM7 2h1v1h-1zM8 2h1v1h-1zM11 2h1v1h-1zM13 2h1v1h-1zM18 2h1v1h-1zM20 2h1v1h-1zM21 2h1v1h-1zM22 2h1v1h-1zM23 2h1v1h-1zM25 2h1v1h-1zM28 2h1v1h-1zM29 2h1v1h-1zM30 2h1v1h-1zM31 2h1v1h-1zM32 2h1v1h-1zM33 2h1v1h-1zM34 2h1v1h-1zM2 3h1v1h-1zM8 3h1v1h-1zM12 3h1v1h-1zM13 3h1v1h-1zM17 3h1v1h-1zM20 3h1v1h-1zM22 3h1v1h-1zM24 3h1v1h-1zM28 3h1v1h-1zM34 3h1v1h-1zM2 4h1v1h-1zM4 4h1v1h-1zM5 4h1v1h-1zM6 4h1v1h-1zM8 4h1v1h-1zM10 4h1v1h-1zM11 4h1v1h-1zM13 4h1v1h-1zM14 4h1v1h-1zM16 4h1v1h-1zM21 4h1v1h-1zM22 4h1v1h-1zM23 4h1v1h-1zM24 4h1v1h-1zM28 4h1v1h-1zM30 4h1v1h-1zM31 4h1v1h-1zM32 4h1v1h-1zM34 4h1v1h-1zM2 5h1v1h-1zM4 5h1v1h-1zM5 5h1v1h-1zM6 5h1v1h-1zM8 5h1v1h-1zM10 5h1v1h-1zM11 5h1v1h-1zM13 5h1v1h-1zM14 5h1v1h-1zM17 5h1v1h-1zM20 5h1v1h-1zM21 5h1v1h-1zM28 5h1v1h-1zM30 5h1v1h-1zM31 5h1v1h-1zM32 5h1v1h-1zM34 5h1v1h-1zM2 6h1v1h-1zM4 6h1v1h-1zM5 6h1v1h-1zM6 6h1v1h-1zM8 6h1v1h-1zM10 6h1v1h-1zM12 6h1v1h-1zM13 6h1v1h-1zM14 6h1v1h-1zM15 6h1v1h-1zM16 6h1v1h-1zM17 6h1v1h-1zM18 6h1v1h-1zM19 6h1v1h-1zM22 6h1v1h-1zM23 6h1v1h-1zM24 6h1v1h-1zM25 6h1v1h-1zM26 6h1v1h-1zM28 6h1v1h-1zM30 6h1v1h-1zM31 6h1v1h-1zM32 6h1v1h-1zM34 6h1v1h-1zM2 7h1v1h-1zM8 7h1v1h-1zM10 7h1v1h-1zM11 7h1v1h-1zM20 7h1v1h-1zM21 7h1v1h-1zM23 7h1v1h-1zM24 7h1v1h-1zM26 7h1v1h-1zM28 7h1v1h-1zM34 7h1v1h-1zM2 8h1v1h-1zM3 8h1v1h-1zM4 8h1v1h-1zM5 8h1v1h-1zM6 8h1v1h-1zM7 8h1v1h-1zM8 8h1v1h-1zM10 8h1v1h-1zM12 8h1v1h-1zM14 8h1v1h-1zM16 8h1v1h-1zM18 8h1v1h-1zM20 8h1v1h-1zM22 8h1v1h-1zM24 8h1v1h-1zM26 8h1v1h-1zM28 8h1v1h-1zM29 8h1v1h-1zM30 8h1v1h-1zM31 8h1v1h-1zM32 8h1v1h-1zM33 8h1v1h-1zM34 8h1v1h-1zM10 9h1v1h-1zM12 9h1v1h-1zM13 9h1v1h-1zM16 9h1v1h-1zM18 9h1v1h-1zM21 9h1v1h-1zM22 9h1v1h-1zM23 9h1v1h-1zM25 9h1v1h-1zM26 9h1v1h-1zM2 10h1v1h-1zM4 10h1v1h-1zM5 10h1v1h-1zM6 10h1v1h-1zM7 10h1v1h-1zM8 10h1v1h-1zM11 10h1v1h-1zM13 10h1v1h-1zM14 10h1v1h-1zM15 10h1v1h-1zM16 10h1v1h-1zM18 10h1v1h-1zM19 10h1v1h-1zM21 10h1v1h-1zM24 10h1v1h-1zM26 10h1v1h-1zM28 10h1v1h-1zM29 10h1v1h-1zM30 10h1v1h-1zM31 10h1v1h-1zM32 10h1v1h-1zM3 11h1v1h-1zM4 11h1v1h-1zM9 11h1v1h-1zM10 11h1v1h-1zM11 11h1v1h-1zM15 11h1v1h-1zM16 11h1v1h-1zM18 11h1v1h-1zM19 11h1v1h-1zM20 11h1v1h-1zM21 11h1v1h-1zM25 11h1v1h-1zM28 11h1v1h-1zM29 11h1v1h-1zM31 11h1v1h-1zM32 11h1v1h-1zM34 11h1v1h-1zM2 12h1v1h-1zM5 12h1v1h-1zM8 12h1v1h-1zM10 12h1v1h-1zM11 12h1v1h-1zM15 12h1v1h-1zM16 12h1v1h-1zM17 12h1v1h-1zM18 12h1v1h-1zM19 12h1v1h-1zM22 12h1v1h-1zM23 12h1v1h-1zM30 12h1v1h-1zM32 12h1v1h-1zM33 12h1v1h-1zM2 13h1v1h-1zM4 13h1v1h-1zM5 13h1v1h-1zM11 13h1v1h-1zM12 13h1v1h-1zM13 13h1v1h-1zM15 13h1v1h-1zM17 13h1v1h-1zM19 13h1v1h-1zM20 13h1v1h-1zM22 13h1v1h-1zM23 13h1v1h-1zM24 13h1v1h-1zM25 13h1v1h-1zM26 13h1v1h-1zM27 13h1v1h-1zM28 13h1v1h-1zM30 13h1v1h-1zM31 13h1v1h-1zM32 13h1v1h-1zM34 13h1v1h-1zM2 14h1v1h-1zM4 14h1v1h-1zM6 14h1v1h-1zM7 14h1v1h-1zM8 14h1v1h-1zM13 14h1v1h-1zM14 14h1v1h-1zM16 14h1v1h-1zM18 14h1v1h-1zM21 14h1v1h-1zM22 14h1v1h-1zM25 14h1v1h-1zM26 14h1v1h-1zM30 14h1v1h-1zM31 14h1v1h-1zM33 14h1v1h-1zM3 15h1v1h-1zM4 15h1v1h-1zM5 15h1v1h-1zM6 15h1v1h-1zM9 15h1v1h-1zM14 15h1v1h-1zM17 15h1v1h-1zM19 15h1v1h-1zM20 15h1v1h-1zM24 15h1v1h-1zM25 15h1v1h-1zM28 15h1v1h-1zM33 15h1v1h-1zM34 15h1v1h-1zM2 16h1v1h-1zM8 16h1v1h-1zM11 16h1v1h-1zM12 16h1v1h-1zM13 16h1v1h-1zM14 16h1v1h-1zM17 16h1v1h-1zM18 16h1v1h-1zM19 16h1v1h-1zM22 16h1v1h-1zM23 16h1v1h-1zM27 16h1v1h-1zM28 16h1v1h-1zM31 16h1v1h-1zM32 16h1v1h-1zM33 16h1v1h-1zM3 17h1v1h-1zM6 17h1v1h-1zM9 17h1v1h-1zM10 17h1v1h-1zM11 17h1v1h-1zM13 17h1v1h-1zM14 17h1v1h-1zM16 17h1v1h-1zM17 17h1v1h-1zM20 17h1v1h-1zM23 17h1v1h-1zM24 17h1v1h-1zM26 17h1v1h-1zM27 17h1v1h-1zM28 17h1v1h-1zM29 17h1v1h-1zM30 17h1v1h-1zM31 17h1v1h-1zM32 17h1v1h-1zM2 18h1v1h-1zM3 18h1v1h-1zM5 18h1v1h-1zM6 18h1v1h-1zM7 18h1v1h-1zM8 18h1v1h-1zM9 18h1v1h-1zM11 18h1v1h-1zM13 18h1v1h-1zM15 18h1v1h-1zM17 18h1v1h-1zM19 18h1v1h-1zM20 18h1v1h-1zM24 18h1v1h-1zM25 18h1v1h-1zM26 18h1v1h-1zM27 18h1v1h-1zM29 18h1v1h-1zM30 18h1v1h-1zM31 18h1v1h-1zM34 18h1v1h-1zM2 19h1v1h-1zM3 19h1v1h-1zM5 19h1v1h-1zM6 19h1v1h-1zM9 19h1v1h-1zM11 19h1v1h-1zM12 19h1v1h-1zM13 19h1v1h-1zM14 19h1v1h-1zM15 19h1v1h-1zM18 19h1v1h-1zM20 19h1v1h-1zM21 19h1v1h-1zM22 19h1v1h-1zM23 19h1v1h-1zM25 19h1v1h-1zM28 19h1v1h-1zM29 19h1v1h-1zM31 19h1v1h-1zM32 19h1v1h-1zM33 19h1v1h-1zM34 19h1v1h-1zM4 20h1v1h-1zM6 20h1v1h-1zM7 20h1v1h-1zM8 20h1v1h-1zM16 20h1v1h-1zM17 20h1v1h-1zM18 20h1v1h-1zM20 20h1v1h-1zM22 20h1v1h-1zM26 20h1v1h-1zM27 20h1v1h-1zM28 20h1v1h-1zM29 20h1v1h-1zM30 20h1v1h-1zM32 20h1v1h-1zM33 20h1v1h-1zM2 21h1v1h-1zM7 21h1v1h-1zM10 21h1v1h-1zM12 21h1v1h-1zM18 21h1v1h-1zM21 21h1v1h-1zM22 21h1v1h-1zM23 21h1v1h-1zM25 21h1v1h-1zM27 21h1v1h-1zM29 21h1v1h-1zM30 21h1v1h-1zM31 21h1v1h-1zM32 21h1v1h-1zM33 21h1v1h-1zM3 22h1v1h-1zM4 22h1v1h-1zM5 22h1v1h-1zM7 22h1v1h-1zM8 22h1v1h-1zM9 22h1v1h-1zM10 22h1v1h-1zM12 22h1v1h-1zM13 22h1v1h-1zM14 22h1v1h-1zM16 22h1v1h-1zM17 22h1v1h-1zM20 22h1v1h-1zM21 22h1v1h-1zM25 22h1v1h-1zM27 22h1v1h-1zM29 22h1v1h-1zM30 22h1v1h-1zM31 22h1v1h-1zM33 22h1v1h-1zM34 22h1v1h-1zM2 23h1v1h-1zM3 23h1v1h-1zM4 23h1v1h-1zM11 23h1v1h-1zM13 23h1v1h-1zM14 23h1v1h-1zM15 23h1v1h-1zM16 23h1v1h-1zM17 23h1v1h-1zM18 23h1v1h-1zM19 23h1v1h-1zM22 23h1v1h-1zM24 23h1v1h-1zM25 23h1v1h-1zM26 23h1v1h-1zM28 23h1v1h-1zM31 23h1v1h-1zM32 23h1v1h-1zM34 23h1v1h-1zM2 24h1v1h-1zM4 24h1v1h-1zM5 24h1v1h-1zM6 24h1v1h-1zM8 24h1v1h-1zM9 24h1v1h-1zM10 24h1v1h-1zM11 24h1v1h-1zM12 24h1v1h-1zM14 24h1v1h-1zM15 24h1v1h-1zM16 24h1v1h-1zM19 24h1v1h-1zM21 24h1v1h-1zM24 24h1v1h-1zM26 24h1v1h-1zM27 24h1v1h-1zM28 24h1v1h-1zM29 24h1v1h-1zM33 24h1v1h-1zM2 25h1v1h-1zM4 25h1v1h-1zM6 25h1v1h-1zM7 25h1v1h-1zM10 25h1v1h-1zM13 25h1v1h-1zM15 25h1v1h-1zM16 25h1v1h-1zM18 25h1v1h-1zM21 25h1v1h-1zM22 25h1v1h-1zM23 25h1v1h-1zM30 25h1v1h-1zM31 25h1v1h-1zM32 25h1v1h-1zM33 25h1v1h-1zM2 26h1v1h-1zM5 26h1v1h-1zM6 26h1v1h-1zM7 26h1v1h-1zM8 26h1v1h-1zM9 26h1v1h-1zM10 26h1v1h-1zM11 26h1v1h-1zM12 26h1v1h-1zM13 26h1v1h-1zM14 26h1v1h-1zM15 26h1v1h-1zM19 26h1v1h-1zM21 26h1v1h-1zM26 26h1v1h-1zM27 26h1v1h-1zM28 26h1v1h-1zM29 26h1v1h-1zM30 26h1v1h-1zM10 27h1v1h-1zM11 27h1v1h-1zM14 27h1v1h-1zM15 27h1v1h-1zM18 27h1v1h-1zM19 27h1v1h-1zM20 27h1v1h-1zM21 27h1v1h-1zM22 27h1v1h-1zM23 27h1v1h-1zM26 27h1v1h-1zM30 27h1v1h-1zM32 27h1v1h-1zM34 27h1v1h-1zM2 28h1v1h-1zM3 28h1v1h-1zM4 28h1v1h-1zM5 28h1v1h-1zM6 28h1v1h-1zM7 28h1v1h-1zM8 28h1v1h-1zM11 28h1v1h-1zM12 28h1v1h-1zM14 28h1v1h-1zM15 28h1v1h-1zM17 28h1v1h-1zM19 28h1v1h-1zM22 28h1v1h-1zM24 28h1v1h-1zM25 28h1v1h-1zM26 28h1v1h-1zM28 28h1v1h-1zM30 28h1v1h-1zM32 28h1v1h-1zM2 29h1v1h-1zM8 29h1v1h-1zM10 29h1v1h-1zM11 29h1v1h-1zM13 29h1v1h-1zM14 29h1v1h-1zM15 29h1v1h-1zM19 29h1v1h-1zM20 29h1v1h-1zM21 29h1v1h-1zM23 29h1v1h-1zM25 29h1v1h-1zM26 29h1v1h-1zM30 29h1v1h-1zM31 29h1v1h-1zM32 29h1v1h-1zM33 29h1v1h-1zM34 29h1v1h-1zM2 30h1v1h-1zM4 30h1v1h-1zM5 30h1v1h-1zM6 30h1v1h-1zM8 30h1v1h-1zM10 30h1v1h-1zM11 30h1v1h-1zM13 30h1v1h-1zM14 30h1v1h-1zM16 30h1v1h-1zM17 30h1v1h-1zM18 30h1v1h-1zM26 30h1v1h-1zM27 30h1v1h-1zM28 30h1v1h-1zM29 30h1v1h-1zM30 30h1v1h-1zM31 30h1v1h-1zM2 31h1v1h-1zM4 31h1v1h-1zM5 31h1v1h-1zM6 31h1v1h-1zM8 31h1v1h-1zM10 31h1v1h-1zM13 31h1v1h-1zM17 31h1v1h-1zM20 31h1v1h-1zM24 31h1v1h-1zM25 31h1v1h-1zM26 31h1v1h-1zM27 31h1v1h-1zM30 31h1v1h-1zM31 31h1v1h-1zM32 31h1v1h-1zM33 31h1v1h-1zM34 31h1v1h-1zM2 32h1v1h-1zM4 32h1v1h-1zM5 32h1v1h-1zM6 32h1v1h-1zM8 32h1v1h-1zM10 32h1v1h-1zM11 32h1v1h-1zM12 32h1v1h-1zM16 32h1v1h-1zM17 32h1v1h-1zM18 32h1v1h-1zM20 32h1v1h-1zM24 32h1v1h-1zM28 32h1v1h-1zM29 32h1v1h-1zM31 32h1v1h-1zM32 32h1v1h-1zM2 33h1v1h-1zM8 33h1v1h-1zM11 33h1v1h-1zM12 33h1v1h-1zM14 33h1v1h-1zM16 33h1v1h-1zM17 33h1v1h-1zM21 33h1v1h-1zM23 33h1v1h-1zM25 33h1v1h-1zM30 33h1v1h-1zM31 33h1v1h-1zM32 33h1v1h-1zM2 34h1v1h-1zM3 34h1v1h-1zM4 34h1v1h-1zM5 34h1v1h-1zM6 34h1v1h-1zM7 34h1v1h-1zM8 34h1v1h-1zM10 34h1v1h-1zM11 34h1v1h-1zM13 34h1v1h-1zM14 34h1v1h-1zM15 34h1v1h-1zM16 34h1v1h-1zM17 34h1v1h-1zM18 34h1v1h-1zM19 34h1v1h-1zM24 34h1v1h-1zM26 34h1v1h-1zM27 34h1v1h-1zM29 34h1v1h-1zM33 34h1v1h-1z"/></svg><p>Scan to connect on LinkedIn</p></div>
+          </div>
+        </div>
+      </div>
+      <p class="flip-hint">Click the badge to flip it</p>
+    </div>
+    <ul class="stats">
+      <li><b data-n="3">3</b><span>Major projects, all public on GitHub</span></li>
+      <li><b data-n="359" data-s="h">359h</b><span>Certified security training</span></li>
+      <li><b data-n="3">3</b><span>University security certifications</span></li>
+    </ul>
+  </div>
+</section>
 
-<article class="card pc rv" data-t="sec web"><span class="status">Completed · Feb – Sep 2026</span><h3>Dark Signal</h3>
-<p>Full-stack phishing simulation and cybersecurity awareness platform.</p>
-<ul class="chips"><li>Python</li><li>FastAPI</li><li>React</li><li>PostgreSQL</li><li>Docker</li></ul>
-<details><summary>Technical details</summary><ul><li>Controlled phishing campaigns, recipient targeting and simulated interaction tracking.</li><li>Risk assessment and security awareness analytics.</li><li>Adaptive training based on user behavior, with role-based access control.</li></ul></details>
-<p class="gh"><a href="https://github.com/ArgirisViv/dark-signal" rel="noopener noreferrer">View on GitHub →</a></p></article>
+<section id="work">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Selected work</h2>
+      <p>Real, tested software. Every project is public, so you can read the code.</p>
+    </div>
+    <div class="filters" role="group" aria-label="Filter projects">
+      <button type="button" data-f="all" aria-pressed="true">All</button><button type="button" data-f="sec" aria-pressed="false">Security</button><button type="button" data-f="web" aria-pressed="false">Full-stack</button><button type="button" data-f="ai" aria-pressed="false">AI / ML</button>
+    </div>
 
-<article class="card pc rv" data-t="ai web"><span class="status">Completed · Jul 2025 – Apr 2026</span><h3>AI Paper Trading Platform</h3>
-<p>End-to-end paper trading system for stocks and crypto with a web dashboard.</p>
-<ul class="chips"><li>Python</li><li>ML</li><li>Docker</li><li>Backtesting</li><li>Pytest</li></ul>
-<details><summary>Technical details</summary><ul><li>Technical indicators, market-regime analysis, ML components and a dedicated risk-management layer.</li><li>Broker and market-data API integrations with an interactive monitoring dashboard.</li><li>Backtesting, execution guardrails and an automated test suite.</li></ul></details>
-<p class="gh"><a href="https://github.com/ArgirisViv/micro-trading-bot" rel="noopener noreferrer">View on GitHub →</a></p></article>
-</div></div></section>
+    <article class="case" data-t="sec">
+      <div class="meta">
+        <span class="pill live">Ongoing</span>
+        <span class="period">Jul 2026 to present</span>
+        <a class="repo" href="https://github.com/ArgirisViv/sentinel-antivirus" rel="noopener noreferrer">ArgirisViv/sentinel-antivirus</a>
+      </div>
+      <div class="body">
+        <h3>Sentinel AV</h3>
+        <p>Windows endpoint-security prototype with a native C++17 scanning engine and a JavaFX console.</p>
+        <ul class="chips"><li>C++17</li><li>Java</li><li>JavaFX</li><li>GitHub Actions</li><li>Docker</li></ul>
+        <div class="flow" role="img" aria-label="Data flow: JavaFX console, then C++17 engine, then Signatures and risk score, then Quarantine and JSONL log"><span class="node">JavaFX console</span><span class="wire" aria-hidden="true"></span><span class="node">C++17 engine</span><span class="wire" aria-hidden="true"></span><span class="node">Signatures and risk score</span><span class="wire" aria-hidden="true"></span><span class="node">Quarantine and JSONL log</span></div>
+        <details><summary>Technical details</summary><ul>
+          <li>SHA-256 signature matching (Windows CNG), EICAR detection and an explainable risk score (entropy, PE headers).</li>
+          <li>Process and folder monitoring, ransomware-style alerts, opt-in quarantine with hash-verified restore.</li>
+          <li>Automated C++/Java tests, Windows CI, release workflow and a documented threat model.</li></ul></details>
+        <a class="btn sm" href="https://github.com/ArgirisViv/sentinel-antivirus" rel="noopener noreferrer">View on GitHub</a>
+      </div>
+    </article>
 
-<section id="terminal"><div class="wrap">
-<h2 class="rv">Ask my terminal</h2><p class="sub rv">Type a command or click one.</p>
-<div class="term rv"><div class="tb"><i></i><i></i><i></i></div><div id="out"></div>
-<div class="ir"><span>$</span><input id="cmd" placeholder="type help…" autocomplete="off" spellcheck="false" aria-label="Terminal command"></div></div>
-<div class="cmds"><button class="btn" data-c="whoami">whoami</button><button class="btn" data-c="skills">skills</button><button class="btn" data-c="projects">projects</button><button class="btn" data-c="education">education</button><button class="btn" data-c="contact">contact</button></div>
-</div></section>
+    <article class="case" data-t="sec web">
+      <div class="meta">
+        <span class="pill done">Completed</span>
+        <span class="period">Feb to Sep 2026</span>
+        <a class="repo" href="https://github.com/ArgirisViv/dark-signal" rel="noopener noreferrer">ArgirisViv/dark-signal</a>
+      </div>
+      <div class="body">
+        <h3>Dark Signal</h3>
+        <p>Full-stack phishing simulation and cybersecurity awareness platform.</p>
+        <ul class="chips"><li>Python</li><li>FastAPI</li><li>React</li><li>PostgreSQL</li><li>Docker</li></ul>
+        <div class="flow" role="img" aria-label="Data flow: React dashboard, then FastAPI with RBAC, then PostgreSQL, then Awareness analytics"><span class="node">React dashboard</span><span class="wire" aria-hidden="true"></span><span class="node">FastAPI with RBAC</span><span class="wire" aria-hidden="true"></span><span class="node">PostgreSQL</span><span class="wire" aria-hidden="true"></span><span class="node">Awareness analytics</span></div>
+        <details><summary>Technical details</summary><ul>
+          <li>Controlled phishing campaigns, recipient targeting and simulated interaction tracking.</li>
+          <li>Risk assessment and security awareness analytics.</li>
+          <li>Adaptive training based on user behavior, with role-based access control.</li></ul></details>
+        <a class="btn sm" href="https://github.com/ArgirisViv/dark-signal" rel="noopener noreferrer">View on GitHub</a>
+      </div>
+    </article>
 
-<section id="experience"><div class="wrap two">
-<div><h2 class="rv">Experience</h2><p class="sub rv">Where I've worked.</p><div class="tl rv">
-<div class="it"><div class="d">Jul – Sep 2026</div><h3>Software Engineer Intern · PRIVACT P.C.</h3><p>Python development, testing and problem-solving in a professional team environment.</p></div>
-<div class="it"><div class="d">Jun – Sep 2024</div><h3>Customer Service & Sales · Hellenic Duty Free Shops</h3><p>Customer-facing work in a high-traffic international retail setting.</p></div></div></div>
-<div><h2 class="rv">Education</h2><p class="sub rv">Where I've studied.</p><div class="tl rv">
-<div class="it"><div class="d">Oct 2026 – present</div><h3>MSc Cybersecurity (remote) · University of Piraeus</h3></div>
-<div class="it"><div class="d">2022 – 2026</div><h3>BSc Cultural Technology and Communication · University of the Aegean</h3><p>Studies completed; degree conferral pending.</p></div>
-<div class="it"><div class="d">Certifications</div><h3>IPICS 2026 · Cybercrime & Cybersecurity · Data Security</h3><p>University of the Aegean · University of Athens (NKUA) · University of Patras</p></div></div></div>
-</div></section>
+    <article class="case" data-t="ai web">
+      <div class="meta">
+        <span class="pill done">Completed</span>
+        <span class="period">Jul 2025 to Apr 2026</span>
+        <a class="repo" href="https://github.com/ArgirisViv/micro-trading-bot" rel="noopener noreferrer">ArgirisViv/micro-trading-bot</a>
+      </div>
+      <div class="body">
+        <h3>AI Paper Trading Platform</h3>
+        <p>End-to-end paper trading system for stocks and crypto with a web dashboard.</p>
+        <ul class="chips"><li>Python</li><li>ML</li><li>Docker</li><li>Backtesting</li><li>Pytest</li></ul>
+        <div class="flow" role="img" aria-label="Data flow: Market data APIs, then Strategy and ML, then Risk layer, then Paper execution, then Dashboard"><span class="node">Market data APIs</span><span class="wire" aria-hidden="true"></span><span class="node">Strategy and ML</span><span class="wire" aria-hidden="true"></span><span class="node">Risk layer</span><span class="wire" aria-hidden="true"></span><span class="node">Paper execution</span><span class="wire" aria-hidden="true"></span><span class="node">Dashboard</span></div>
+        <details><summary>Technical details</summary><ul>
+          <li>Technical indicators, market-regime analysis, ML components and a dedicated risk-management layer.</li>
+          <li>Broker and market-data API integrations with an interactive monitoring dashboard.</li>
+          <li>Backtesting, execution guardrails and an automated test suite.</li></ul></details>
+        <a class="btn sm" href="https://github.com/ArgirisViv/micro-trading-bot" rel="noopener noreferrer">View on GitHub</a>
+      </div>
+    </article>
+  </div>
+</section>
 
-<section id="skills"><div class="wrap">
-<h2 class="rv">Skills</h2><p class="sub rv">Tools I use.</p>
-<div class="skills rv">
-<div><h3>Development</h3><ul class="chips"><li>Python</li><li>FastAPI</li><li>JavaScript</li><li>React</li><li>HTML/CSS</li><li>Java</li><li>C++</li></ul></div>
-<div><h3>Security</h3><ul class="chips"><li>Network security</li><li>Nmap</li><li>Wireshark</li><li>Kali Linux</li><li>Threat modeling</li><li>Phishing simulation</li></ul></div>
-<div><h3>Infrastructure</h3><ul class="chips"><li>Linux</li><li>Docker</li><li>Git / GitHub</li><li>CI/CD (GitHub Actions)</li><li>PostgreSQL</li><li>MySQL</li></ul></div>
-<div><h3>Languages</h3><ul class="chips"><li>Greek (native)</li><li>English (B2, professional working proficiency)</li></ul></div>
-</div></div></section>
+<section id="terminal">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Ask my terminal</h2>
+      <p>Type a command, press Tab to autocomplete, use the arrow keys for history. There are a few hidden ones too.</p>
+    </div>
+    <div class="term">
+      <div class="tb"><span>argiris@portfolio: ~</span><span class="tb-s"><span class="dot"></span>connected</span></div>
+      <div id="out" role="log" aria-live="polite"></div>
+      <label class="ir"><span class="pr">argiris@portfolio:~$</span><input id="cmd" placeholder="type help" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Terminal command"></label>
+    </div>
+    <div class="cmds"><button type="button" data-c="whoami">whoami</button><button type="button" data-c="projects">projects</button><button type="button" data-c="skills">skills</button><button type="button" data-c="experience">experience</button><button type="button" data-c="certs">certs</button><button type="button" data-c="contact">contact</button></div>
+  </div>
+</section>
 
-<section id="contact"><div class="wrap"><div class="cta rv">
-<h2>Let's work together</h2><p class="sub">I'm looking for remote software or security roles: full-time, part-time, freelance or contract.</p>
-<button class="btn p" id="cp">Copy email</button><a class="btn" href="mailto:argirisvivelis@gmail.com">Send an email</a><a class="btn" href="Argiris_Vivelis_CV.pdf" target="_blank" rel="noopener noreferrer">View CV</a><a class="btn" href="Argiris_Vivelis_CV.pdf" download="Argiris_Vivelis_CV.pdf">Download CV</a><a class="btn" href="https://linkedin.com/in/argiris-vivelis-a49b79262" rel="noopener noreferrer">LinkedIn</a><a class="btn" href="https://github.com/ArgirisViv" rel="noopener noreferrer">GitHub</a>
-</div></div></section>
-<footer>© 2026 Argiris Vivelis</footer>
+<section id="path">
+  <div class="wrap path">
+    <div>
+      <h2>Experience</h2>
+      <ol class="trace">
+        <li><span class="d">Jul to Sep 2026</span><h3>Software Engineer Intern, PRIVACT P.C.</h3><p>Python development, testing and problem-solving in a professional team environment.</p></li>
+        <li><span class="d">Jun to Sep 2024</span><h3>Customer Service & Sales, Hellenic Duty Free Shops</h3><p>Customer-facing work in a high-traffic international retail setting.</p></li>
+      </ol>
+    </div>
+    <div>
+      <h2>Education</h2>
+      <ol class="trace">
+        <li><span class="d">Oct 2026 to present</span><h3>MSc Cybersecurity (remote), University of Piraeus</h3></li>
+        <li><span class="d">2022 to 2026</span><h3>BSc Cultural Technology and Communication, University of the Aegean</h3><p>Informatics direction. Studies completed, degree conferral pending.</p></li>
+        <li><span class="d">Certifications</span><h3>IPICS 2026, Cybercrime & Cybersecurity, Data Security</h3><p>University of the Aegean (89 h), University of Athens NKUA (70 h), University of Patras (200 h).</p></li>
+      </ol>
+    </div>
+  </div>
+</section>
 
+<section id="stack">
+  <div class="wrap">
+    <div class="sec-head"><h2>Skills</h2><p>The tools I use day to day.</p></div>
+    <div class="stack">
+      <div><h3>Development</h3><ul class="chips"><li>Python</li><li>FastAPI</li><li>C++17</li><li>Java</li><li>JavaScript</li><li>React</li><li>Node.js</li><li>HTML/CSS</li><li>SQL</li><li>Bash</li></ul></div>
+      <div><h3>Security</h3><ul class="chips"><li>Network security</li><li>Threat modeling</li><li>Nmap</li><li>Wireshark</li><li>Kali Linux</li><li>Phishing simulation</li></ul></div>
+      <div><h3>Infrastructure</h3><ul class="chips"><li>Linux</li><li>Docker</li><li>Git / GitHub</li><li>GitHub Actions CI/CD</li><li>PostgreSQL</li><li>MySQL</li></ul></div>
+      <div><h3>Languages</h3><ul class="chips"><li>Greek (native)</li><li>English (B2, professional working proficiency)</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap cta">
+    <h2>Let’s build something secure.</h2>
+    <p>I’m looking for remote software or security roles: full-time, part-time, freelance or contract.</p>
+    <button class="mail" id="cp" type="button"><span>argirisvivelis@gmail.com</span><em id="cpl">Copy</em></button>
+    <div class="actions">
+      <a class="btn primary" href="mailto:argirisvivelis@gmail.com">Send an email</a>
+      <a class="btn" href="Argiris_Vivelis_CV.pdf" target="_blank" rel="noopener noreferrer">View CV</a>
+      <a class="btn" href="Argiris_Vivelis_CV.pdf" download="Argiris_Vivelis_CV.pdf">Download CV</a>
+      <a class="btn" href="https://linkedin.com/in/argiris-vivelis-a49b79262" rel="noopener noreferrer">LinkedIn</a>
+      <a class="btn" href="https://github.com/ArgirisViv" rel="noopener noreferrer">GitHub</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="wrap foot">
+  <span>© 2026 Argiris Vivelis</span>
+  <span>Served under a strict Content Security Policy. <a href=".well-known/security.txt">security.txt</a></span>
+</footer>
 <script src="main.js"></script>
 </body>
 </html>
